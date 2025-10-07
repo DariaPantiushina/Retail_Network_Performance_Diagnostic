@@ -34,6 +34,7 @@ The architecture of the data mart includes **four layers**:
 
 - **stg_sales_case_clean**(store_id, date, revenue, transactions)
 
+
 2. dim_ (**Dimensions**): contains reference tables for consistent dimension data.
 
 - **dim_regions_case**(region_id, region, population, avg_income);
@@ -42,9 +43,11 @@ The architecture of the data mart includes **four layers**:
 
 - **dim_date_case**(date_id, year, quarter, month, day, weekday)
 
+
 3. fact_ (**Facts**): contains fact tables with transactional data.
 
 - **fact_sales_case**(store_id, date_id, revenue, transactions)
+
 
 4. marts_ (**Analytics Marts**): contains aggregated summary tables for reporting and visualization.
 
