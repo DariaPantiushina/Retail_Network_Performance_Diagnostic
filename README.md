@@ -96,3 +96,23 @@ The collected aggregates and results of the statistical analysis are provided in
 4) Cohort Line Charts: "Average Revenue: Cohort Analysis by Store Age & Region Group" - segmented into three region groups (Depressed, Moderate, Rich), showing average revenue trends by cohort month (2024-01 to 2024-12)
 
 ## Findings & Business Insights & Recommendations
+
+1) Regional differences - differences in AOV across regions are statistically significant (ANOVA, p < 0.01);
+
+2) Income effect - the impact of household income on AOV is confirmed — a 10% increase in income leads to a +6.4% increase in AOV (regression analysis);
+
+3) Store life cycle - new stores exhibit different growth trajectories (in wealthier regions, they reach performance thresholds faster, whereas in economically weaker regions, growth is much slower);
+
+4) Within-region variation: even within the same region, some stores perform consistently below the confidence interval, suggesting managerial or operational inefficiencies.
+
+5) **Recommendations**:
+
+- Low-income regions - focus on a mass-traffic strategy (use promotions, discounts, and accessibility initiatives to drive volume);
+
+- Underperforming stores in wealthy regions - conduct individual audits (assortment, management quality, local competition) to identify operational bottlenecks;
+
+- New stores - develop cohort benchmarks based on the income and population characteristics of each region, rather than comparing to the entire chain average;
+
+- Reporting for the board - include confidence intervals in performance reports to distinguish noise from stable effects, not just averages;
+
+- Strategic planning - cluster regions by income level (e.g., high-income vs. low-income) and design separate growth models for each segment
