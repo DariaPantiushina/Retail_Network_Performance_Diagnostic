@@ -103,7 +103,7 @@ The collected aggregates and results of the statistical analysis are provided in
 
 3) Store life cycle - new stores exhibit different growth trajectories (in wealthier regions, they reach performance thresholds faster, whereas in economically weaker regions, growth is much slower);
 
-4) Within-region variation: even within the same region, some stores perform consistently below the confidence interval, suggesting managerial or operational inefficiencies.
+4) Within-region variation: even within the same region, some stores perform consistently below the confidence interval, suggesting managerial or operational inefficiencies;
 
 5) **Recommendations**:
 
