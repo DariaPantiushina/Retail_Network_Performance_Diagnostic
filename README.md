@@ -22,9 +22,11 @@
 
 4) Even within a single region, stores exhibit substantial performance differences, reflecting managerial and operational factors (verification: regression with **fixed effects**)  
 
+
 ## Data Mart Schema
 
 The architecture of the data mart includes **four layers**:
+
 
 1. stg_ (**Staging**): includes light data cleaning (data type conversions, removal of explicit duplicates, etc.).
 
@@ -59,4 +61,11 @@ The architecture of the data mart includes **four layers**:
 
 - **marts_sales_region_last90**(region, region_group, total_revenue, total_transactions, avg_check) 
 
+
 ## SQL & Python Analysis
+
+The collected aggregates and results of the statistical analysis are provided in the following files: ["stg_dim_fact_marts_analysis"](sql/stg_dim_fact_marts_analysis.sql) & ["stat_analysis"](python/analysis.ipynb)
+
+## Creating a Dashboard in Power BI
+
+## Findings & Business Insights & Recommendations
