@@ -99,7 +99,7 @@ The collected aggregates and results of the statistical analysis are provided in
 
 1) Regional differences - differences in AOV across regions are statistically significant (ANOVA, p < 0.01);
 
-2) Income effect - the impact of household income on AOV is confirmed — a 10% increase in income leads to a +6.4% increase in AOV (regression analysis);
+2) Income effect - the impact of household income on AOV is confirmed - a 10% increase in income leads to a +6.4% increase in AOV (regression analysis);
 
 3) Store life cycle - new stores exhibit different growth trajectories (in wealthier regions, they reach performance thresholds faster, whereas in economically weaker regions, growth is much slower);
 
