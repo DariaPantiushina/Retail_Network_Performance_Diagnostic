@@ -12,6 +12,16 @@
 
 3) Significance testing: are the observed differences between groups statistically significant and stable, or could they be explained by random noise in the data?
 
+**Hypotheses**:
+
+1) Regions with lower income and smaller populations tend to exhibit constrained demand potential (verification via **linear regression**);
+   
+2) Demand structure: regional demand profiles differ - some markets are frequency-driven, while others are value- or price-driven with higher average checks. Verification through 1) **factor analysis**: revenue = transactions × AOV, 2) **Principal Component Analysis (PCA)** on standardized features {total_transactions, avg_check} to assess whether one principal component explains most of the variation in revenue;
+
+3) Store life cycle: new stores grow at different rates - verification via **cohort analysis**;
+
+4) Even within a single region, stores exhibit substantial performance differences, reflecting managerial and operational factors (verification: regression with **fixed effects**)  
+
 ## Data Mart Schema
 
 The architecture of the data mart includes **four layers**:
