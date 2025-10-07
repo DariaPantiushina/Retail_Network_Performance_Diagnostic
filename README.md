@@ -20,8 +20,7 @@
 
 3) Store life cycle: new stores grow at different rates - verification via **cohort analysis**;
 
-4) Even within a single region, stores exhibit substantial performance differences, reflecting managerial and operational factors (verification: regression with **fixed effects**)  
-
+4) Even within a single region, stores exhibit substantial performance differences, reflecting managerial and operational factors (verification: **mixed-effects** regression (revenue ~ avg_income + store_age + (1|region))  
 
 ## Data Mart Schema
 
@@ -44,7 +43,7 @@ The architecture of the data mart includes **four layers**:
 - **dim_stores_case**(store_id, city, region_id, opening_date);
 
 - **dim_date_case**(date_id, year, quarter, month, day, weekday)
-
+  
 
 3. fact_ (**Facts**): contains fact tables with transactional data.
 
@@ -59,13 +58,41 @@ The architecture of the data mart includes **four layers**:
 
 - **marts_sales_cohort_region**(region, region_group, cohort_month, sales_month, avg_revenue);
 
-- **marts_sales_region_last90**(region, region_group, total_revenue, total_transactions, avg_check) 
-
+- **marts_sales_region_last90**(region, region_group, total_revenue, total_transactions, avg_check)
+  
 
 ## SQL & Python Analysis
 
-The collected aggregates and results of the statistical analysis are provided in the following files: ["stg_dim_fact_marts_analysis"](sql/stg_dim_fact_marts_analysis.sql) & ["stat_analysis"](python/analysis.ipynb)
+The collected aggregates and results of the statistical analysis are provided in the following files: ["stg_dim_fact_marts_analysis"](sql/stg_dim_fact_marts_analysis.sql) & ["stat_analysis"](python/analysis.ipynb):
+
+1) AOV by region + confidence interval;
+
+2) Regional differences: ANOVA + post-hoc test (Tukey HSD);
+
+3) Regression: Evaluating household income as a factor influencing AOV. The model specification is: AOV ~ avg_income + population + store_age;
+
+4) Modeling within regions to capture managerial and operational heterogeneity;
+
+5) Cohort analysis: store-age cohorts compared by growth rate across regions;
+
+6) Revenue = traffic × AOV → helps pinpoint whether issues come from traffic or average check;
+   
+7) Principal Component Analysis (PCA) based on transaction frequency and average check → reveals distinct market types:
+
+- regions with high PC2 values are price-driven (revenue primarily driven by higher checks),
+
+- while those with low PC2 values are volume-driven (revenue driven by transaction frequency).
 
 ## Creating a Dashboard in Power BI
+
+["Dashboard"](power_bi/dashboard.pdf) structure includes the following key blocks:
+
+1) KPI Blocks: Total Revenue, Total Transactions;
+
+2) Bar Charts: Top 10 Regions with the Highest Average Check (AOV + CI) - leading regions: Bavaria, North Holland, Île-de-France; Top 10 Regions with the Lowest Average Check (AOV + CI) - lagging regions: West Pomerania, Hauts-de-France, Podkarpackie;
+
+3) Scatter Plot: "Total Revenue by Total Transactions and Average Check" - shows the relationship between transaction volume and average check across regions;
+
+4) Cohort Line Charts: "Average Revenue: Cohort Analysis by Store Age & Region Group" - segmented into three region groups (Depressed, Moderate, Rich), showing average revenue trends by cohort month (2024-01 to 2024-12)
 
 ## Findings & Business Insights & Recommendations
